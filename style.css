@@ -1,0 +1,170 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  /* Центрируем элементы по вертикали */
+}
+
+#loaderContainer {
+    width: 200px;
+    height: 40px;
+    background-color: #333; /* Цвет фона прогресс-бара */
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+#loader {
+    width: 200px;
+    height: 40px;
+    background-color: white; /* Цвет прогресса */
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: fillLoader 5s linear forwards; /* Анимация заполнения */
+}
+
+@keyframes fillLoader {
+    from { width: 0%; }
+    to { width: 100%; }
+}
+
+#enot {
+    background-image: url('img/raccoon.gif');
+    background-size: contain;
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+    display: none;
+}
+
+#enot_img {
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+    transition: transform 0.3s ease;
+}
+
+#enot_img:hover {
+    transform: scale(1.05);
+}
+
+#greeting {
+    font-size: 3em; /* Размер шрифта */
+    font-family: 'Roboto', sans-serif; /* Шрифт */
+    font-weight: bold; /* Жирный */
+    color: black; /* Черный цвет текста */
+    text-transform: uppercase; /* Преобразование в верхний регистр */
+    letter-spacing: 2px; /* Расстояние между буквами */
+    text-shadow: 
+        -1px -1px 0 white,
+        1px -1px 0 white,
+        -1px 1px 0 white,
+        1px 1px 0 white; /* Белая обводка */
+    animation: pulse 2s infinite alternate; /* Анимация мерцания */
+}
+
+@keyframes pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+}
+
+#nameInputContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+#nameInputContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#nameInputContainer label {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+#nameInputLabel {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif; /* Добавляем стильный шрифт */
+}
+
+#nameInputLabel:hover {
+    animation: scatter 1s linear infinite;
+}
+
+#nameInput {
+    padding: 10px;
+    font-size: 1em;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 300px; /* Устанавливаем ширину инпута */
+}
+
+#nameInput:focus {
+    outline: none;
+    border-color: #a68158;
+}
+
+#continueButton, #exitButton {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #e4d8c6;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 300px; /* Устанавливаем ширину кнопок */
+    margin-bottom: 10px; /* Добавляем отступ между кнопками */
+}
+
+#continueButton:hover, #exitButton:hover {
+    background-color: #a68158;
+}
+
+@media screen and (max-width: 600px) {
+    #enot img {
+        width: 150px;
+    }
+
+    #enot_img img {
+        width: 150px;
+    }
+
+    #nameInput {
+        width: 90%;
+        max-width: none;
+    }
+
+    #continueButton, #exitButton {
+        width: 90%;
+        max-width: none;
+    }
+}
+
+    #nameInput {
+        width: 90%;
+        max-width: none;
+    }
+
+    #continueButton, #exitButton {
+        width: 90%;
+        max-width: none;
+    }
+}

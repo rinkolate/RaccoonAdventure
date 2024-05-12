@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enot's Adventure</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="enotPage">
+    <div id="enotLabel">
+        <h2 id="enotText"></h2>
+    </div>
+<div id="enotInfo">
+    <div id="enotImageContainer">
+            <img id="enotImage" src="img/enot-image.jpg" alt="Енот">
+        </div>
+        <div id="statsLabels">
+            <div class="statLabel">
+                <h3>Сытость</h3>
+                <div class="progress">
+                    <div id="hungerBar" class="progress-bar"></div>
+                </div>
+            </div>
+            <div class="statLabel">
+                <h3>Бодрость</h3>
+                <div class="progress">
+                    <div id="energyBar" class="progress-bar"></div>
+                </div>
+            </div>
+            <div class="statLabel">
+                <h3>Настроение</h3>
+                <div class="progress">
+                    <div id="moodBar" class="progress-bar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="actionButtons">
+    <button id="feedButton">Кормить</button>
+    <button id="petButton">Гладить</button>
+    <button id="sleepButton">Уложить спать</button>
+    <button id="playButton">Играть</button>
+    <button id="restartButton">Начать сначала</button>
+</div>
+</div>
+<script src="script2.js"></script>
+</body>
+</html>

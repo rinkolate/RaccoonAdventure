@@ -1,0 +1,111 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+#enotPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding-left: 20px;
+}
+
+#enotLabel {
+    font-size: 3em; /* Размер шрифта */
+    font-family: 'Roboto', sans-serif; /* Шрифт */
+    font-weight: bold; /* Жирный */
+    color: white; /* Белый цвет текста */
+    text-transform: uppercase; /* Преобразование в верхний регистр */
+    letter-spacing: 2px; /* Расстояние между буквами */
+    text-shadow: 
+        -1px -1px 0 gray,
+        1px -1px 0 gray,
+        -1px 1px 0 gray,
+        1px 1px 0 black; /* Белая обводка */
+    animation: pulse 2s infinite alternate; /* Анимация мерцания */
+}
+
+@keyframes pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+}
+#enotInfo {
+    display: flex;
+    align-items: center;
+}
+
+#statsLabels {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Располагаем по правому краю */
+}
+
+.statLabel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.statLabel h3 {
+    margin-right: 5px;
+}
+
+.progress {
+    width: 200px; /* Ширина прогресс-баров */
+    height: 25px;
+    background-color: #f5deb3; /* Бежевый цвет */
+    border: 1px solid #8b4513; /* Темно-коричневый контур */
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #f5deb3; /* Темно-коричневый цвет */
+}
+
+#enotImage {
+    width: 300px;
+    height: auto;
+    border: 5px solid #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    margin-right: 20px;
+}
+
+#enotImage:hover {
+    transform: scale(1.05);
+}
+
+#actionButtons {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+#actionButtons button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f5deb3; /* Бежевый цвет */
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#actionButtons button:hover {
+    background-color: #8b4513; /* Кофейный цвет при наведении */
+}
+
+#restartButton {
+    display: none; /* Скрытая изначально */
+}
